@@ -6,16 +6,16 @@ using System.Web;
 
 namespace ProiectMIPFinal.Models
 {
-    public class PartiModel
+    public class MasiniModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public int Price { get; set; }
-        public int Amount { get; set; }
     }
-    public class PartiDbContext:DbContext
+
+    public class MasiniDbContext:DbContext
     {
-        public DbSet<PartiModel> PartiSet { get; set; }
+        public DbSet<MasiniModel> MasiniSet { get; set; }
     }
 }

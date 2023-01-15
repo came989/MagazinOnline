@@ -7,35 +7,35 @@ using ProiectMIPFinal.Models;
 
 namespace ProiectMIPFinal.Controllers
 {
-    public class PartiController : Controller
+    public class MasiniController : Controller
     {
-        private PartiDbContext partidbctx= new PartiDbContext();
-        // GET: Parti
+        private MasiniDbContext masinidbctx = new MasiniDbContext();
+        // GET: Masini
         public ActionResult Index()
         {
-            return View(partidbctx.PartiSet.ToList());
+            return View(masinidbctx.MasiniSet.ToList());
         }
 
         [HttpGet]
 
-        public ActionResult Create() 
+        public ActionResult Create()
         {
-            PartiModel parte= new PartiModel();
-            return View(parte);
+            MasiniModel masina = new MasiniModel();
+            return View(masina);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(PartiModel parte)
+        public ActionResult Create(MasiniModel masina)
         {
             if (ModelState.IsValid)
             {
-                partidbctx.PartiSet.Add(parte);
-                partidbctx.SaveChanges();
+                masinidbctx.MasiniSet.Add(masina);
+                masinidbctx.SaveChanges();
 
                 return RedirectToAction("Index");
             }
-            return View(parte);
+            return View(masina);
         }
         [HttpGet]
         public ActionResult Edit(int? id)
@@ -44,25 +44,25 @@ namespace ProiectMIPFinal.Controllers
             {
                 return HttpNotFound();
             }
-            PartiModel parte = partidbctx.PartiSet.Find(id);
-            if (null == parte)
+            MasiniModel masina = masinidbctx.MasiniSet.Find(id);
+            if (null == masina)
             {
                 return HttpNotFound();
             }
-            return View(parte);
+            return View(masina);
         }
 
         [HttpPost]
-        public ActionResult Edit(PartiModel parte)
+        public ActionResult Edit(MasiniModel masina)
         {
             if (ModelState.IsValid)
             {
-                partidbctx.Entry(parte).State = System.Data.Entity.EntityState.Modified;
-                partidbctx.SaveChanges();
+                masinidbctx.Entry(masina).State = System.Data.Entity.EntityState.Modified;
+                masinidbctx.SaveChanges();
                 return RedirectToAction("Index");
 
             }
-            return View(parte);
+            return View(masina);
         }
 
         [HttpGet]
@@ -72,12 +72,12 @@ namespace ProiectMIPFinal.Controllers
             {
                 return RedirectToAction("Index");
             }
-            PartiModel parte = partidbctx.PartiSet.Find(id);
-            if (null == parte)
+            MasiniModel masina = masinidbctx.MasiniSet.Find(id);
+            if (null == masina)
             {
                 return HttpNotFound();
             }
-            return View(parte);
+            return View(masina);
         }
 
         [HttpPost]
@@ -86,9 +86,9 @@ namespace ProiectMIPFinal.Controllers
             if (ModelState.IsValid)
             {
 
-                PartiModel parte = partidbctx.PartiSet.Find(id);
-                partidbctx.PartiSet.Remove(parte);
-                partidbctx.SaveChanges();
+                MasiniModel masina = masinidbctx.MasiniSet.Find(id);
+                masinidbctx.MasiniSet.Remove(masina);
+                masinidbctx.SaveChanges();
 
             }
             return RedirectToAction("Index");
@@ -96,9 +96,9 @@ namespace ProiectMIPFinal.Controllers
         }
 
         [HttpGet]
-        public ActionResult Details(int? id)
+        public ActionResult Details(int id)
         {
-            PartiModel msg = partidbctx.PartiSet.Find(id);
+            MasiniModel msg = masinidbctx.MasiniSet.Find(id);
             if (null == msg)
             {
                 return HttpNotFound();
