@@ -128,10 +128,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MasiniController.cs" />
     <Compile Include="Controllers\PartiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\MasiniModel.cs" />
     <Compile Include="Models\PartiModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -169,10 +171,18 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Masini\Index.cshtml" />
+    <Content Include="Views\Masini\Create.cshtml" />
+    <Content Include="Views\Masini\Edit.cshtml" />
+    <Content Include="Views\Masini\Delete.cshtml" />
+    <Content Include="Views\Masini\Details.cshtml" />
     <Content Include="Views\Parti\Index.cshtml" />
     <Content Include="Views\Parti\Create.cshtml" />
+    <Content Include="Views\Parti\Edit.cshtml" />
+    <Content Include="Views\Parti\Delete.cshtml" />
+    <Content Include="Views\Parti\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
