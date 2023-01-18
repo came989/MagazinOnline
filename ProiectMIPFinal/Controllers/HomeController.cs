@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,6 +13,7 @@ namespace ProiectMIPFinal.Controllers
         public ActionResult Index()
         {
             LoggingOps.filePath = LoggingOps.CreateLogFile("Logging.txt");
+            LoggingOps.filePath = "C:\\Program Files\\IIS Express\\Logging.txt";
             return View();
         }
 

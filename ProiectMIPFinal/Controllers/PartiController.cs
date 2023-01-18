@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using LoggingOperationsAssembly;
 using ProiectMIPFinal.Models;
 
 namespace ProiectMIPFinal.Controllers
@@ -32,7 +33,7 @@ namespace ProiectMIPFinal.Controllers
             {
                 partidbctx.PartiSet.Add(parte);
                 partidbctx.SaveChanges();
-
+                bool log = LoggingOps.WriteLog(LoggingOps.filePath, "S-a adaugat o parte. " + parte.Name + " " + parte.Description + " " + parte.Price + " " + parte.Amount);
                 return RedirectToAction("Index");
             }
             return View(parte);
@@ -59,8 +60,8 @@ namespace ProiectMIPFinal.Controllers
             {
                 partidbctx.Entry(parte).State = System.Data.Entity.EntityState.Modified;
                 partidbctx.SaveChanges();
+                bool log = LoggingOps.WriteLog(LoggingOps.filePath, "S-a editat o parte. " + parte.Name + " " + parte.Description + " " + parte.Price + " " + parte.Amount);
                 return RedirectToAction("Index");
-
             }
             return View(parte);
         }
@@ -89,7 +90,7 @@ namespace ProiectMIPFinal.Controllers
                 PartiModel parte = partidbctx.PartiSet.Find(id);
                 partidbctx.PartiSet.Remove(parte);
                 partidbctx.SaveChanges();
-
+                bool log = LoggingOps.WriteLog(LoggingOps.filePath, "S-a eliminat o parte. " + parte.Name + " " + parte.Description + " " + parte.Price + " " + parte.Amount );
             }
             return RedirectToAction("Index");
 

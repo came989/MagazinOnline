@@ -14,7 +14,6 @@ namespace ProiectMIPFinal.Controllers
         // GET: Masini
         public ActionResult Index()
         {
-            bool log = LoggingOps.WriteLog(LoggingOps.filePath, "S-a apasat butonul Masini.");
             return View(masinidbctx.MasiniSet.ToList());
         }
 
@@ -34,7 +33,7 @@ namespace ProiectMIPFinal.Controllers
             {
                 masinidbctx.MasiniSet.Add(masina);
                 masinidbctx.SaveChanges();
-
+                bool log = LoggingOps.WriteLog(LoggingOps.filePath, "S-a adaugat o masina. " + masina.Name + " " + masina.Description + " " + masina.Price);
                 return RedirectToAction("Index");
             }
             return View(masina);
@@ -61,6 +60,7 @@ namespace ProiectMIPFinal.Controllers
             {
                 masinidbctx.Entry(masina).State = System.Data.Entity.EntityState.Modified;
                 masinidbctx.SaveChanges();
+                bool log = LoggingOps.WriteLog(LoggingOps.filePath, "S-a editat o masina. " + masina.Name + " " + masina.Description + " " + masina.Price);
                 return RedirectToAction("Index");
 
             }
@@ -91,7 +91,7 @@ namespace ProiectMIPFinal.Controllers
                 MasiniModel masina = masinidbctx.MasiniSet.Find(id);
                 masinidbctx.MasiniSet.Remove(masina);
                 masinidbctx.SaveChanges();
-
+                bool log = LoggingOps.WriteLog(LoggingOps.filePath, "S-a eliminat o masina. " + masina.Name + " " + masina.Description + " " + masina.Price);
             }
             return RedirectToAction("Index");
 
