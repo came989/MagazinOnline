@@ -1,0 +1,6 @@
+C:\Users\nicol\Desktop\ProiectMIPFinal\LanguagesAssembly\bin\Debug\LanguagesAssembly.dll
+C:\Users\nicol\Desktop\ProiectMIPFinal\LanguagesAssembly\bin\Debug\LanguagesAssembly.pdb
+C:\Users\nicol\Desktop\ProiectMIPFinal\LanguagesAssembly\obj\Debug\LanguagesAssembly.csproj.AssemblyReference.cache
+C:\Users\nicol\Desktop\ProiectMIPFinal\LanguagesAssembly\obj\Debug\LanguagesAssembly.csproj.CoreCompileInputs.cache
+C:\Users\nicol\Desktop\ProiectMIPFinal\LanguagesAssembly\obj\Debug\LanguagesAssembly.dll
+C:\Users\nicol\Desktop\ProiectMIPFinal\LanguagesAssembly\obj\Debug\LanguagesAssembly.pdb
