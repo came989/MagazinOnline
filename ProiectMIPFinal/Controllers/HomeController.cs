@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using LoggingOperationsAssembly;
 
 namespace ProiectMIPFinal.Controllers
 {
@@ -10,6 +11,7 @@ namespace ProiectMIPFinal.Controllers
     {
         public ActionResult Index()
         {
+            LoggingOps.filePath = LoggingOps.CreateLogFile("Logging.txt");
             return View();
         }
 

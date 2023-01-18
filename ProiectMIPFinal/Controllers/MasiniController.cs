@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ProiectMIPFinal.Models;
+using LoggingOperationsAssembly;
 
 namespace ProiectMIPFinal.Controllers
 {
@@ -13,6 +14,7 @@ namespace ProiectMIPFinal.Controllers
         // GET: Masini
         public ActionResult Index()
         {
+            bool log = LoggingOps.WriteLog(LoggingOps.filePath, "S-a apasat butonul Masini.");
             return View(masinidbctx.MasiniSet.ToList());
         }
 
