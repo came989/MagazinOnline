@@ -51,13 +51,10 @@ namespace LoggingOperationsAssembly
         {
             if (File.Exists(filePath))
             {
-                using (FileStream logFile = new FileStream(filePath, FileMode.Open))
+                using (StreamWriter w = File.AppendText(filePath))
                 {
-                    TextWriterTraceListener txtTrace = new TextWriterTraceListener(logFile);
-                    Trace.Listeners.Add(txtTrace);
-                    Trace.WriteLine($"{DateTime.UtcNow} : {message}");
-                    Trace.Flush();
-                    return true; //the file exists, everything is good :)
+                    w.WriteLine($"{DateTime.UtcNow} : {message}");
+                    return true;
                 }
             }
             else
