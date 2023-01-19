@@ -127,12 +127,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccesoriiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MasiniController.cs" />
     <Compile Include="Controllers\PartiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Accesorii.cs" />
     <Compile Include="Models\MasiniModel.cs" />
     <Compile Include="Models\PartiModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -183,6 +185,11 @@
     <Content Include="Views\Parti\Edit.cshtml" />
     <Content Include="Views\Parti\Delete.cshtml" />
     <Content Include="Views\Parti\Details.cshtml" />
+    <Content Include="Views\Accesorii\Index.cshtml" />
+    <Content Include="Views\Accesorii\Create.cshtml" />
+    <Content Include="Views\Accesorii\Edit.cshtml" />
+    <Content Include="Views\Accesorii\Delete.cshtml" />
+    <Content Include="Views\Accesorii\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

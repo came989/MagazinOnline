@@ -10,9 +10,9 @@ namespace ProiectMIPFinal.Models
     {
 
         public int ID { get; set; }
-        public int CheieRezerva { get; set; }
-        public string Logo { get; set; }
-        public string ParfumMasina { get; set; }
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public string Manufacturer { get; set; }
     }
 
     public class AccesoriiDbContext : DbContext

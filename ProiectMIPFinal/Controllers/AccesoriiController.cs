@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using LoggingOperationsAssembly;
 using ProiectMIPFinal.Models;
 
 namespace ProiectMIPFinal.Controllers
@@ -10,7 +11,7 @@ namespace ProiectMIPFinal.Controllers
     public class AccesoriiController : Controller
     {
         private AccesoriiDbContext accesoriidbctx = new AccesoriiDbContext();
-        // GET: Masini
+        // GET: Accesorii
         public ActionResult Index()
         {
             return View(accesoriidbctx.AccesoriiSet.ToList());
@@ -32,7 +33,7 @@ namespace ProiectMIPFinal.Controllers
             {
                 accesoriidbctx.AccesoriiSet.Add(accesoriu);
                 accesoriidbctx.SaveChanges();
-
+                bool log = LoggingOps.WriteLog(LoggingOps.filePath, "S-a adaugat o accesoriu. " + accesoriu.Name + " " + accesoriu.Type + " " + accesoriu.Manufacturer);
                 return RedirectToAction("Index");
             }
             return View(accesoriu);
@@ -59,6 +60,7 @@ namespace ProiectMIPFinal.Controllers
             {
                 accesoriidbctx.Entry(accesoriu).State = System.Data.Entity.EntityState.Modified;
                 accesoriidbctx.SaveChanges();
+                bool log = LoggingOps.WriteLog(LoggingOps.filePath, "S-a editat o accesoriu. " + accesoriu.Name + " " + accesoriu.Type + " " + accesoriu.Manufacturer);
                 return RedirectToAction("Index");
 
             }
@@ -89,7 +91,7 @@ namespace ProiectMIPFinal.Controllers
                 Accesorii accesoriu = accesoriidbctx.AccesoriiSet.Find(id);
                 accesoriidbctx.AccesoriiSet.Remove(accesoriu);
                 accesoriidbctx.SaveChanges();
-
+                bool log = LoggingOps.WriteLog(LoggingOps.filePath, "S-a eliminat o accesoriu. " + accesoriu.Name + " " + accesoriu.Type + " " + accesoriu.Manufacturer);
             }
             return RedirectToAction("Index");
 
