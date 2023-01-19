@@ -211,6 +211,10 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="LanguagesAssembly\LanguagesAssembly.csproj">
+      <Project>{fb40c256-debd-4440-ad63-e26d7ede764f}</Project>
+      <Name>LanguagesAssembly</Name>
+    </ProjectReference>
     <ProjectReference Include="LoggingOperationsAssembly\LoggingOperationsAssembly.csproj">
       <Project>{4eae2f94-2e87-4ea9-995f-7ac36ff018fa}</Project>
       <Name>LoggingOperationsAssembly</Name>
