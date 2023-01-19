@@ -1,0 +1,12 @@
+C:\Users\nicol\Desktop\ProiectMIPFinal\LoggingOperationsAssembly\obj\Debug\LoggingOperationsAssembly.csproj.AssemblyReference.cache
+C:\Users\nicol\Desktop\ProiectMIPFinal\LoggingOperationsAssembly\obj\Debug\LoggingOperationsAssembly.csproj.CoreCompileInputs.cache
+C:\Users\nicol\Desktop\ProiectMIPFinal\LoggingOperationsAssembly\bin\Debug\LoggingOperationsAssembly.dll
+C:\Users\nicol\Desktop\ProiectMIPFinal\LoggingOperationsAssembly\bin\Debug\LoggingOperationsAssembly.pdb
+C:\Users\nicol\Desktop\ProiectMIPFinal\LoggingOperationsAssembly\obj\Debug\LoggingOperationsAssembly.dll
+C:\Users\nicol\Desktop\ProiectMIPFinal\LoggingOperationsAssembly\obj\Debug\LoggingOperationsAssembly.pdb
+D:\Download\MagazinOnline-main\MagazinOnline-main\ProiectMIPFinal\LoggingOperationsAssembly\bin\Debug\LoggingOperationsAssembly.dll
+D:\Download\MagazinOnline-main\MagazinOnline-main\ProiectMIPFinal\LoggingOperationsAssembly\bin\Debug\LoggingOperationsAssembly.pdb
+D:\Download\MagazinOnline-main\MagazinOnline-main\ProiectMIPFinal\LoggingOperationsAssembly\obj\Debug\LoggingOperationsAssembly.csproj.AssemblyReference.cache
+D:\Download\MagazinOnline-main\MagazinOnline-main\ProiectMIPFinal\LoggingOperationsAssembly\obj\Debug\LoggingOperationsAssembly.csproj.CoreCompileInputs.cache
+D:\Download\MagazinOnline-main\MagazinOnline-main\ProiectMIPFinal\LoggingOperationsAssembly\obj\Debug\LoggingOperationsAssembly.dll
+D:\Download\MagazinOnline-main\MagazinOnline-main\ProiectMIPFinal\LoggingOperationsAssembly\obj\Debug\LoggingOperationsAssembly.pdb
